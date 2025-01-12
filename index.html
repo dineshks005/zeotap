@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Sheets Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="app-header">
+        <h1>Zeoptap</h1>
+    </header>
+
+    <!-- Toolbar Section -->
+    <div class="toolbar">
+        <button id="bold">B</button>
+        <button id="italic">I</button>
+        <input type="color" id="color-picker">
+        <select id="font-size">
+            <option value="12px">12</option>
+            <option value="14px" selected>14</option>
+            <option value="16px">16</option>
+            <option value="18px">18</option>
+            <option value="20px">20</option>
+        </select>
+        <label>
+            <input type="checkbox" id="background-toggle">
+            Background Color
+        </label>
+        <input type="text" id="formula-bar" placeholder="Enter formula here">
+        <button id="undo">Undo</button>
+        <button id="redo">Redo</button>
+        <select id="file-options" class="file-dropdown">
+            <option value="" disabled selected>File Options</option>
+            <option value="save">Save File</option>
+            <option value="open">Open File</option>
+            <option value="new">New File</option>
+        </select>
+        <input type="file" id="open-file" style="display: none;">
+    </div>
+
+    <!-- Spreadsheet Section -->
+    <div class="spreadsheet">
+        <table id="sheet">
+            <!-- Rows and Columns will be dynamically generated -->
+        </table>
+    </div>
+
+    <!-- Chart Section -->
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script src="script.js"></script>
+</body>
+</html>
